@@ -1,0 +1,149 @@
+
+.page_container {
+    max-width: 1320px;
+    border-radius: 40px;
+    background-color: #222;
+    margin: 3% auto;
+    padding: 40px 70px;
+    position: relative;
+    z-index: 10;
+    transform: perspective(600px) rotateY(-90deg);
+    animation: appear 0.5s linear forwards;
+}
+
+@keyframes appear {
+    0%{
+        transform: perspective(600px) rotateY(-90deg) scale(0);
+        opacity: 0.1;
+        bottom: 0%;
+    }
+    20%{
+        opacity: 0.1;
+    }
+    40%{
+        opacity: 0.1;
+    }
+    60%{
+        opacity: 0.3;
+    }
+    80%{
+        opacity: 0.5;
+    }
+    100%{
+        transform: perspective(600px) rotateY(0deg) scale(1);
+        opacity: 1;
+        bottom: 90%;
+    }
+}
+
+
+
+
+
+/*-----------------HEADER---------------------------*/
+
+.header_content {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.header_logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_logo-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007ced;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.header_logo-txt {
+    font-size: 20px;
+}
+
+/*-------------------- INFO ---------------------------*/
+
+.info {
+    position: relative;
+    width: calc(100% + 120px);
+    display: flex;
+    align-items: center;
+    margin-left: -70px;
+}
+
+.info h1 {
+    font-weight: 600;
+    height: 100%;
+}
+
+.info_pic{
+    position:relative;
+    width: 50%; 
+    min-height: 530px;
+    background-image: url('../resources/img/perfil-ian.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.info_txt {
+    position: relative;
+    right: 60px;
+    background-color: #333;
+    width: 50%;
+    padding: 70px 90px;
+}
+
+.btn {
+    background-color: #333;
+    padding: 10px 30px;
+    color: #FFF;
+    border: solid 2px #007ced;
+    border-radius: 30px;
+    transition: 0.5s;
+    margin: 20px 0;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+}
+
+.btn:hover{
+    background-color: #007ced;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/*-------------------------------FOOTER------------------------------------------*/
+
+footer { 
+    
+    width: calc(100% + 140px);
+    border-top: solid 2px #6c757d3d;
+    margin-left: -70px;
+    margin-top: 40px;
+    padding: 15px 0 0 0;
+}
+
+
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-bottom: -30px;
+}
+
+.footer_content a {
+    margin-left: 0;
+}
+
