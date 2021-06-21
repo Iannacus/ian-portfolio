@@ -1,10 +1,13 @@
 import React from 'react'
 
-function Button() {
+function Button({ text, link }) {
     return (
-        <button className='btn'>
-            Descargar CV
-        </button>
+        <a href={link} target='blank'>
+            <button className='btn'>
+                {text}
+            </button>
+        </a>
+
     )
 }
 

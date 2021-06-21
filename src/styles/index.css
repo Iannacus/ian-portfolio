@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 40px;
     margin: 5px 0;
 }
 
@@ -50,3 +50,10 @@ a:hover {
 .no-margin {
     margin: 0;
 }
+
+.border-division {
+    margin-left: -70px;
+    width: calc(100% + 140px);
+    border-top: solid 2px #6c757d3d;
+}
+

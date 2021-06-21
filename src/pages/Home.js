@@ -15,9 +15,7 @@ function Home() {
                         <p className='gray no-margin'>Front End Web Developer</p>
                         <h1>Ian Rosas</h1>
                         <p>Desarrollador Front End que cuenta con conocimientos en HTML, CSS, Java Script y React.
-                            Me destaco por ser una persona que le encanta y encuentra divertido resolver problemas con software,
-                            y siempre estoy en constante aprendizaje.
-                        </p>
+                            Me destaco por ser una persona que le encanta y y se divierte resolviendo problemas con software.</p>
                         <Button />
                     </div>
                 </div>

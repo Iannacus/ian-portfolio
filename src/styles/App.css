@@ -1,14 +1,43 @@
 
 .page_container {
-    max-width: 1320px;
-    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
     background-color: #222;
-    margin: 3% auto;
-    padding: 40px 70px;
-    position: relative;
-    z-index: 10;
-    transform: perspective(600px) rotateY(-90deg);
-    animation: appear 0.5s linear forwards;
+    margin: 0;
+    padding: 40px 0;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+@media(min-width: 768px){
+    .page_container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background-color: #222;
+        margin: 0;
+        padding: 40px 70px;
+        position: absolute;
+        top:0;
+        left:0;
+        
+    }
+}
+
+@media(min-width: 990px){
+    .page_container {
+        max-width: 1320px;
+        border-radius: 40px;
+        margin: 3% auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        transform: perspective(600px) rotateY(-90deg);
+        animation: appear 0.5s linear forwards;
+    }
 }
 
 @keyframes appear {
@@ -43,12 +72,34 @@
 /*-----------------HEADER---------------------------*/
 
 .header_content {
-    width: calc(100% + 40px);
-    margin-left: -20px;
+    width:95%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+}
+
+.desktop {
+    display: none;
+}
+
+.mobile {
+    display: block;
+}
+
+@media (min-width: 990px){
+    .desktop {
+        display: inline;
+    }
+    .mobile {
+        display: none;
+    }
+    .header_content{
+        width: calc(100% +40px);
+        margin-left: -20px;
+    }
+    
 }
 .header_logo {
     display: flex;
@@ -66,20 +117,58 @@
     border-radius: 50%;
     font-weight: 700;
     font-size: 24px;
+    color: #FFF;
 }
 
 .header_logo-txt {
     font-size: 20px;
+    color: #FFF;
 }
+
+.header_logo-txt:hover {
+    font-weight: 400;
+}
+
+.animation {
+    width: 40%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 40px;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    z-index: 10;
+    animation: slide 0.5s forwards;
+}
+
+.animation a {
+    margin: 10px 0;
+}
+
+@keyframes slide {
+    0%{
+        right: -500px;
+    }
+    100%{
+        right: 0;
+    }
+    
+}
+
+/*-----------------------MENU--------------------------------*/
+
+
 
 /*-------------------- INFO ---------------------------*/
 
 .info {
-    position: relative;
-    width: calc(100% + 120px);
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-left: -70px;
 }
 
 .info h1 {
@@ -88,21 +177,65 @@
 }
 
 .info_pic{
-    position:relative;
-    width: 50%; 
-    min-height: 530px;
+    width: 100%; 
+    min-height: 300px;
     background-image: url('../resources/img/perfil-ian.jpg');
     background-position: center center;
     background-size: cover;
 }
 
 .info_txt {
-    position: relative;
-    right: 60px;
     background-color: #333;
-    width: 50%;
-    padding: 70px 90px;
+    width: 100%;
+    padding: 7% 10%;
 }
+
+
+
+@media (min-width: 990px){
+    .info_txt h1{
+        font-size: 48px;
+    }
+}
+
+@media (min-width: 768px){
+    .info_txt p {
+        
+            font-size: 12px; 
+        
+    }
+
+    .info {
+        position: relative;
+        width: calc(100% + 120px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: -70px;
+    }
+    
+    .info h1 {
+        font-weight: 600;
+        height: 100%;
+    }
+    
+    .info_pic{
+        position:relative;
+        width: 50%; 
+        min-height: 530px;
+        background-image: url('../resources/img/perfil-ian.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    
+    .info_txt {
+        position: relative;
+        right: 60px;
+        background-color: #333;
+        width: 50%;
+        padding: 7% 10%;
+    }
+} 
 
 .btn {
     background-color: #333;
@@ -147,3 +280,192 @@ footer {
     margin-left: 0;
 }
 
+/*-------------------RESUME PAGE---------------------*/
+
+.section-title {
+    margin-left: -70px;
+    width: calc(100% + 140px);
+    background-color: #252525;
+    padding: 30px;
+}
+
+.section-title h1 {
+    margin-left: 60px;
+}
+
+.about, .skills {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_info, .skills_info {
+    width: 50%;
+}
+
+.about_info h2, .skills_info h2 {
+    display: inline-block;
+    position: relative;
+}
+
+.about_info h2:before, .skills_info h2:before {
+    content: '';
+    height: 2px;
+    border-radius: 1px;
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    background-color: #444;
+    z-index: 10;
+}
+
+.about_info h2:after, .skills_info h2:after {
+    content: '';
+    height: 2px;
+    border-radius: 1px;
+    position: absolute;
+    display: block;
+    width: 30%;
+    bottom: 0;
+    background-color: #007ced;
+    z-index: 10;
+}
+
+.about_info-content {
+    margin-left: 20px;
+    border-left: 1px solid #6c757d3d;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    margin-right: 25px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #6c757d3d;
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-item header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: -30px;
+}
+
+.timeline-item h4, .timeline-item p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.timeline-content {
+    margin-left: 20px;
+}
+
+.year {
+    display: inline-block;
+    background-color: #222;
+    padding: 2px 15px;
+    color: #FFF;
+    border: solid 2px #007ced;
+    border-radius: 30px;
+    margin: 20px 0;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+.skill_item-header {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill_item {
+    margin: 30px 0;
+}
+
+.skill_item-header h4, .skill_item-header p {
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.skill_item-bar {
+    position: relative;
+    width: 85%;
+    background-color: #444;
+    height: 10px;
+    border-radius: 5px;
+    border: solid 2px #999;
+}
+
+.skill_item-fillbar {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 85%;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #007ced;
+    border: solid 2px #444;
+}
+
+/*---------------------PORTFOLIO---------------------------*/
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project {
+    position: relative;
+    height: 250px;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 15px;
+    animation: zoomOut 0.3s linear forwards;
+}
+
+.project:hover {
+    animation: zoom 0.3s linear forwards;
+}
+
+@keyframes zoomOut{
+    0%{background-size: 190%;}
+    100%{background-size: 125%;}
+}
+
+@keyframes zoom {
+    0%{background-size: 120%;}
+    100%{background-size: 195%;}
+}
+
+.project_info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+}
+
+.project_info h4 {
+    position: absolute;
+    left: 10px;
+    display: inline-block;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 2.5px;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0
+}
