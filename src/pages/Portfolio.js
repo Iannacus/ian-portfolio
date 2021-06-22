@@ -9,6 +9,7 @@ import todo from '../resources/img/projects/todolist.png';
 import ram from '../resources/img/projects/ram.png';
 import weather from '../resources/img/projects/weathehrapp.png';
 import trivia from '../resources/img/projects/triviapp.png';
+import crud from '../resources/img/projects/crudjs.png'
 
 function Portfolio() {
     return (
@@ -64,6 +65,13 @@ function Portfolio() {
                         Puedes seleccionar la cantidad de preguntas, el tema, la dificultad entre otras caracteristicas más.'
                         applink='https://triviappi.netlify.app/'
                         repolink='https://github.com/Iannacus/trivia'
+                    />
+                    <Project
+                        title='CRUD'
+                        img={crud}
+                        description='Interfaz de lista de carros dodne puedes agregar, editar y eliminar hehcha con HTML, CSS y JS'
+                        applink='https://carcrud.netlify.app/'
+                        repolink='https://github.com/Iannacus/CRUD'
                     />
                 </div>
             </main >

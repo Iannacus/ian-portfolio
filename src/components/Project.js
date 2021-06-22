@@ -10,11 +10,11 @@ function Project({ title, img, description, applink, repolink }) {
                     <h4>{title}</h4>
                     <div className='buttons'>
                         <Button
-                            text='view online'
+                            text='Online'
                             link={applink}
                         />
                         <Button
-                            text='Code on GitHub'
+                            text='GitHub'
                             link={repolink}
                         />
                     </div>

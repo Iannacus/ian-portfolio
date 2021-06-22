@@ -16,7 +16,10 @@ function Home() {
                         <h1>Ian Rosas</h1>
                         <p>Desarrollador Front End que cuenta con conocimientos en HTML, CSS, Java Script y React.
                             Me destaco por ser una persona que le encanta y y se divierte resolviendo problemas con software.</p>
-                        <Button />
+                        <Button
+                            text='Descargar CV'
+                            link='https://drive.google.com/file/d/1DoaxtFU0l1X7PGSv5emR2lhRuZgNXU4W/view?usp=sharing'
+                        />
                     </div>
                 </div>
             </main>

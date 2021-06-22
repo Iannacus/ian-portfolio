@@ -1,7 +1,6 @@
 
 .page_container {
     width: 100%;
-    height: 100%;
     border-radius: 0;
     background-color: #222;
     margin: 0;
@@ -14,7 +13,6 @@
 @media(min-width: 768px){
     .page_container {
         width: 100%;
-        height: 100%;
         border-radius: 0;
         background-color: #222;
         margin: 0;
@@ -82,6 +80,23 @@
 
 .desktop {
     display: none;
+}
+
+.active {
+    border-bottom: solid 2px #007ced;
+    animation: activeLink 2s linear;
+}
+
+@keyframes activeLink {
+    0%{
+        width: 0%;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
 }
 
 .mobile {
@@ -171,6 +186,7 @@
     align-items: center;
 }
 
+
 .info h1 {
     font-weight: 600;
     height: 100%;
@@ -258,9 +274,9 @@
 
 footer { 
     
-    width: calc(100% + 140px);
+    width: 100%;
+    margin: auto;
     border-top: solid 2px #6c757d3d;
-    margin-left: -70px;
     margin-top: 40px;
     padding: 15px 0 0 0;
 }
@@ -280,13 +296,27 @@ footer {
     margin-left: 0;
 }
 
+@media(min-width: 768px){
+    footer { 
+    
+        width: calc(100% + 140px);
+        margin-left: -70px;
+    }
+}
+
 /*-------------------RESUME PAGE---------------------*/
 
 .section-title {
     margin-left: -70px;
-    width: calc(100% + 140px);
+    width: 100%;
     background-color: #252525;
     padding: 30px;
+}
+
+@media(min-width: 768px){
+    .section-title {
+        width: calc(100% + 140px);
+    }
 }
 
 .section-title h1 {
@@ -294,20 +324,43 @@ footer {
 }
 
 .about, .skills {
+    width: 90%;
+    margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .about_info, .skills_info {
-    width: 50%;
+    width: 100%;
 }
 
-.about_info h2, .skills_info h2 {
+.resume {
+    width: 90%;
+    margin: auto;
+}
+
+@media(min-width: 768px){
+    .about, .skills {
+        width: 100%;
+        flex-direction: row;
+    }
+    
+    .about_info, .skills_info {
+        width: 50%;
+    }
+
+    .resume {
+        width: 100%;
+    }
+}
+
+.underline {
     display: inline-block;
     position: relative;
 }
 
-.about_info h2:before, .skills_info h2:before {
+.underline:before {
     content: '';
     height: 2px;
     border-radius: 1px;
@@ -319,7 +372,7 @@ footer {
     z-index: 10;
 }
 
-.about_info h2:after, .skills_info h2:after {
+.underline:after {
     content: '';
     height: 2px;
     border-radius: 1px;
@@ -417,9 +470,33 @@ footer {
 /*---------------------PORTFOLIO---------------------------*/
 
 .projects {
+    width: 400px;
+    margin: 20px auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
+}
+
+@media(max-width: 450px) {
+    .projects {
+        width: 95%;
+    }
+}
+
+@media(min-width: 768px) {
+    .projects {
+        width: 100%;
+        margin-top: 40px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 990px) {
+    .projects {
+        width: 100%;
+        margin-top: 60px;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .project {
@@ -445,6 +522,7 @@ footer {
     100%{background-size: 195%;}
 }
 
+
 .project_info {
     position: absolute;
     width: 100%;
@@ -466,6 +544,41 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
+    gap: 15px;
     position: absolute;
-    bottom: 0
+    bottom: 0;
 }
+
+.buttons a {
+    margin-left: 0;
+}
+
+/*CONTACT*/
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin:auto;
+}
+
+.contact input {
+    padding: 12px;
+    border-radius: 5px;
+    border: solid 2px #555;
+    background-color: #222;
+}
+
+.contact_info-item {
+    display: flex;
+    gap: 15px;
+}
+
+.contact_inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+
