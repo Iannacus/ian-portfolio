@@ -9,7 +9,8 @@ import todo from '../resources/img/projects/todolist.png';
 import ram from '../resources/img/projects/ram.png';
 import weather from '../resources/img/projects/weathehrapp.png';
 import trivia from '../resources/img/projects/triviapp.png';
-import crud from '../resources/img/projects/crudjs.png'
+import crud from '../resources/img/projects/crudjs.png';
+import tvlist from '../resources/img/projects/tvlist.png';
 
 function Portfolio() {
     return (
@@ -20,6 +21,13 @@ function Portfolio() {
             ></Title>
             <main>
                 <div className='projects'>
+                    <Project
+                        title='tvList'
+                        img={tvlist}
+                        description='Aplicación realizada con redux para mostrar catalogo de series de tv. Puedes buscar, agregar y eleiminar de favoritos'
+                        applink='https://tvlistene.netlify.app/'
+                        repolink='https://github.com/Iannacus/tvlist/'
+                    />
                     <Project
                         title='stopWatch'
                         img={stopwatch}
